@@ -10,6 +10,7 @@
     --yellow-button-hover: #c79d08;
     --nav-bg: #2a2a2a;
     --nav-text: #003366;
+    --real-normal-blue: #0080ff;
 }
 
 * {
@@ -25,7 +26,6 @@ body {
     background: var(--primary-bg);
     padding-top: 60px;
     font-size: 1.12rem;
-    animation: fadeInBody 0.7s ease-in;
     overflow-x: hidden;
 }
 
@@ -578,11 +578,10 @@ section p {
 }
 
 .service-card {
-    text-align: center;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -638,12 +637,11 @@ section p {
 }
 
 .product-card {
-    text-align: center;
-    padding: 2rem;
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: var(--text-main);
     overflow: hidden;
 }
@@ -726,17 +724,19 @@ section p {
 
 .client-card-link {
     background: var(--white);
-    padding: 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 1.5rem;
     box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
     color: var(--text-main);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.client-card-link a {
     text-decoration: none;
-    width: 7rem;
 }
 
 @media (min-width: 640px) {
@@ -793,7 +793,7 @@ section p {
 .client-card-link .text-lg {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--secondary-blue);
+    color: var(--text-main);
     margin-bottom: 0.25rem;
 }
 
@@ -805,7 +805,7 @@ section p {
 
 .client-card-link .text-sm {
     font-size: 0.75rem;
-    color: var(--text-secondary);
+    color: var(--real-normal-blue);
 }
 
 @media (min-width: 640px) {
@@ -1434,11 +1434,10 @@ section h2::after {
 
 /* Service Cards */
 .service-card {
-    text-align: center;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1471,12 +1470,11 @@ section h2::after {
 
 /* Product Cards */
 .product-card {
-    text-align: center;
-    padding: 2rem;
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: var(--text-main);
     overflow: hidden;
 }

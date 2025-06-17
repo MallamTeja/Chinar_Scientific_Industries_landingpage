@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    // Observe elements with animation classes
-    document.querySelectorAll('.service-card, .product-card, .client-card-link').forEach(element => {
+    // Observe only cards within sections
+    document.querySelectorAll('section .service-card, section .product-card, section .client-card-link').forEach(element => {
         observer.observe(element);
     });
     
