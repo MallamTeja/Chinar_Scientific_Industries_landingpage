@@ -88,7 +88,7 @@
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
     <!-- Header/Nav -->
     <header class="hero">
         <nav class="main-nav" role="navigation" aria-label="Main navigation">
@@ -132,7 +132,7 @@
         </div>
     </header>
 
-    <main role="main">
+    <main class="flex-grow" role="main">
         <!-- About Section -->
         <section id="about" class="about-section">
             <div class="container max-w-7xl mx-auto px-4">
@@ -394,13 +394,12 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+    <footer class="mt-auto">
+        <div class="container max-w-7xl mx-auto px-4 footer-grid">
             <!-- Company Info / Description -->
             <div class="footer-section text-center md:text-left">
                 <div class="nav-left mb-4">
-                    <img src="log.png" alt="Chinar Scientific Industries Logo" class="logo-img inline-block" loading="lazy">
-                    <span class="brand-name text-white"> Scientific <span class="brand-sub text-white">Industries</span></span>
+                    <span class="brand-name text-white"> Chinar Scientific <span class="brand-sub text-white">Industries</span></span>
                 </div>
                 <p class="text-gray-300 leading-relaxed max-w-sm mx-auto md:mx-0">
                     Transforming education through innovative technology solutions since 1984. Your trusted partner for STEM, ICT & EdTech integration across India.
@@ -422,15 +421,17 @@
 
             <!-- Social Links / Contact -->
             <div class="footer-section text-center md:text-right">
-                <h3 class="text-white text-xl font-semibold mb-4">Connect With Us</h3>
+                <h3 class="text-white text-xl font-semibold mb-4">Connect With Us on</h3>
                 <div class="social-links space-x-4 mb-4">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:info@scientificindustries.com" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="Mail"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/company/chinar-scientific-industries/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/your_twitter_handle" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-                <p class="text-gray-300 text-sm">&copy; 2023 Chinar Scientific Industries. All rights reserved.</p>
             </div>
+        </div>
+        <div class="footer-copyright-bar">
+            <p>&copy; 2025 Chinar Scientific Industries. All rights reserved.</p>
         </div>
     </footer>
 

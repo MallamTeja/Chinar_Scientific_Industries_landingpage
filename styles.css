@@ -1,10 +1,18 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-bg: #fffffff0;
     --secondary-blue: #003366;
     --accent-orange: #c06000;
     --text-main: #212121;
     --text-secondary: #5F6368;
-    --white: #ffffff;
+    --white: #fffffff5;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
     --yellow-button: #dbbc0d;
     --yellow-button-hover: #c79d08;
@@ -24,7 +32,6 @@ body {
     line-height: 1.6;
     color: var(--text-main);
     background: var(--primary-bg);
-    padding-top: 60px;
     font-size: 1.12rem;
     overflow-x: hidden;
 }
@@ -1087,70 +1094,136 @@ section p {
 
 /* Footer */
 footer {
-    background: var(--secondary-blue);
+    background-color: var(--secondary-blue);
     color: var(--white);
-    padding: 2rem 0;
-    text-align: center;
+    padding: 3rem 0;
+    font-size: 0.95rem;
 }
 
 @media (min-width: 640px) {
     footer {
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
 }
 
+@media (min-width: 768px) {
+    footer .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .footer-section:nth-child(1) { /* Company Info */
+        grid-column: 1 / 2;
+        text-align: left;
+    }
+    .footer-section:nth-child(2) { /* Quick Links */
+        grid-column: 2 / 3;
+        text-align: left;
+    }
+    .footer-section:nth-child(3) { /* Social Links */
+        grid-column: 3 / 4;
+        text-align: right;
+    }
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.footer-section h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-section p,
+.footer-section ul li a {
+    color: var(--white);
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--white);
+}
+
+footer .brand-name, footer .brand-sub {
+    color: var(--white) !important;
+}
+
 .social-links {
-    margin-bottom: 1.25rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .social-links {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
+        justify-content: flex-end;
     }
 }
 
 .social-links a {
     color: var(--white);
-    font-size: 1.25rem;
-    transition: color 0.3s;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
 @media (min-width: 640px) {
     .social-links a {
-        font-size: 1.5rem;
-        width: 3rem;
-        height: 3rem;
+        font-size: 1.75rem;
+        width: 48px;
+        height: 48px;
     }
 }
 
 .social-links a:hover {
-    color: var(--accent-orange);
-    background: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--white);
 }
 
 footer p {
-    font-size: 0.875rem;
-    opacity: 0.9;
+    color: var(--white);
 }
 
 @media (min-width: 640px) {
     footer p {
         font-size: 1rem;
     }
+}
+
+.footer-copyright-bar {
+    background-color: #002855; /* A slightly darker shade for distinction */
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--white);
+    margin-top: 2rem;
+    font-size: 0.85rem;
 }
 
 /* Scroll Margin for Anchor Links */
@@ -2040,4 +2113,9 @@ p, .section-desc {
     .office-card i {
         font-size: 1rem;
     }
+}
+
+/* Styling for the copyright section at the very bottom of the footer */
+footer > .container:last-child p {
+    /* Removed */
 } 
